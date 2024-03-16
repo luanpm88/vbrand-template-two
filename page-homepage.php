@@ -139,7 +139,7 @@
 								<!-- Start Column 2 -->
 								<div class="col-lg-<?php echo round(12/($count)); ?>">
 									<a class="product-item" href="<?=esc_url(get_permalink())?>">
-										<?php if (wp_get_attachment_image_src(get_the_ID())) { ?>
+									<?php if (count(wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ))) { ?>
 											<?php the_post_thumbnail('single-post-thumbnail', array('class' => 'img-fluid product-thumbnail')); ?>
 										<?php } else { ?>
 											<img src="<?=get_template_directory_uri()?>/images/empty-<?=$i?>.png" class="img-fluid product-thumbnail">
